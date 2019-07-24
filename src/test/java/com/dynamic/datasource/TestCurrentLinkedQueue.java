@@ -2,6 +2,8 @@ package com.dynamic.datasource;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -44,9 +46,7 @@ public class TestCurrentLinkedQueue {
 
     @Test
     public void test2(){
-        //吃饭的人数
-        Integer peopelNumber=10000;
-        //桌子的人数
-        Integer tableNumber=10;
+        List<String> strings = Arrays.asList("A", "C");
+        System.out.println(strings.contains("A"));
     }
 }
