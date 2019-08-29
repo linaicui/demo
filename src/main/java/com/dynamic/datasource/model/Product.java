@@ -1,6 +1,7 @@
 package com.dynamic.datasource.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Product bean
@@ -12,11 +13,30 @@ import java.io.Serializable;
 public class Product implements Serializable {
     private static final long serialVersionUID = 1435515995276255188L;
 
-    private long id;
+    private Long id;
     private String name;
-    private long price;
+    private Long price;
+    private Boolean isMar;
 
-    public long getId() {
+    private List<Car> cars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    public Boolean getMar() {
+        return isMar;
+    }
+
+    public void setMar(Boolean mar) {
+        isMar = mar;
+    }
+
+    public Long getId() {
         return id;
     }
 
@@ -32,7 +52,7 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public long getPrice() {
+    public Long getPrice() {
         return price;
     }
 
