@@ -4,6 +4,7 @@ import com.dynamic.datasource.mapper.ProductDao;
 import com.dynamic.datasource.model.Product;
 import com.dynamic.datasource.utils.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +30,7 @@ public class ProductService {
      * @return
      * @throws ServiceException
      */
+    @Cacheable(value = "FIND_PRU_BY_ID",key = "#productId+'select'")
     public Product select(long productId) throws ServiceException {
         Product product = productDao.select(productId);
         if (product == null) {
