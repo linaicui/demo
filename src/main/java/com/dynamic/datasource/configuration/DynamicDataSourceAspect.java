@@ -38,7 +38,7 @@ public class DynamicDataSourceAspect {
         Boolean isQueryMethod = isQueryMethod(point.getSignature().getName());
         if (isQueryMethod) {
             DynamicDataSourceContextHolder.useSlaveDataSource();
-            logger.debug("Switch DataSource to [{}] in Method [{}]",
+            logger.info("Switch DataSource to [{}] in Method [{}]",
                     DynamicDataSourceContextHolder.getDataSourceKey(), point.getSignature());
         }
     }
