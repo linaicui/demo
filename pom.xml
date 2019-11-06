@@ -91,10 +91,17 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!--WebCollector开源爬虫框架-->
 		<dependency>
 			<groupId>cn.edu.hfut.dmic.webcollector</groupId>
 			<artifactId>WebCollector</artifactId>
 			<version>2.52</version>
+		</dependency>
+		<!--selenium配合webcollector爬取新浪微博-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.springfox</groupId>
